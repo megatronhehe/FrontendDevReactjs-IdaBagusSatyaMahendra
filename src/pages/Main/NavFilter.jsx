@@ -5,6 +5,8 @@ import { TbCircle, TbCircleFilled } from "react-icons/tb";
 export default function NavFilter() {
 	// toggle filter open now
 	const [toggleOpenNow, setToggleOpenNow] = useState(false);
+	const [priceFilter, setPriceFilter] = useState("");
+	const [categoriesFilter, setCategoriesFilter] = useState("");
 
 	return (
 		<nav className="relative border-y text-xs tracking-wide font-normal py-4 px-10 text-gray-500 gap-8 flex justify-between items-center">
@@ -25,7 +27,11 @@ export default function NavFilter() {
 					</li>
 
 					<li className="border-b ">
-						<select value="" placeholder="Price" className="w-16">
+						<select
+							value={priceFilter}
+							onChange={(e) => setPriceFilter(e.target.value)}
+							className="w-16"
+						>
 							<option value="">Price</option>
 							<option value="1000">1000</option>
 							<option value="2000">2000</option>
@@ -33,7 +39,11 @@ export default function NavFilter() {
 					</li>
 
 					<li className="border-b ">
-						<select value="" placeholder="Categories" className="w-24">
+						<select
+							value={categoriesFilter}
+							onChange={(e) => setCategoriesFilter(e.target.value)}
+							className="w-24"
+						>
 							<option value="">Categories</option>
 							<option value="1000">1000</option>
 							<option value="2000">2000</option>
