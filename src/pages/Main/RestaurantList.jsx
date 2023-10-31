@@ -18,7 +18,7 @@ export default function RestaurantList() {
 	return (
 		<section className="px-10 py-8">
 			<h1 className="text-xl mb-8">All Restaurants</h1>
-			<ul className="grid sm:grid-cols-3 md:grid-cols-4 grid-cols-2 gap-6">
+			<ul className="grid  md:grid-cols-3 grid-cols-2 gap-6 lg:grid-cols-4">
 				{restaurantsElement}
 			</ul>
 		</section>

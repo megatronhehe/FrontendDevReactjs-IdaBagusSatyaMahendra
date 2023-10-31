@@ -11,6 +11,9 @@ export default function RestaurantsContextProvider({ children }) {
 		fetching: true,
 	});
 
+	// error message state
+	const [error, setError] = useState("");
+
 	// api options
 	const url = "https://worldwide-restaurants.p.rapidapi.com/search";
 	const options = {
@@ -35,12 +38,17 @@ export default function RestaurantsContextProvider({ children }) {
 	// function to fetch restaurants
 	const fetchRestaurants = async () => {
 		setIsLoading((prev) => ({ ...prev, fetching: true }));
+		setError("");
 		try {
 			const res = await fetch(url, options);
+			if (!res.ok) {
+				return setError(res.statusText);
+			}
+
 			const data = await res.json();
 			setRestaurants(data.results.data);
 		} catch (error) {
-			console.log(error);
+			setError(error);
 		} finally {
 			setIsLoading((prev) => ({ ...prev, fetching: false }));
 		}
