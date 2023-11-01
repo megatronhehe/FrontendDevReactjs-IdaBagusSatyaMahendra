@@ -20,6 +20,7 @@ export default function DetailsSection({ thisRestaurant }) {
 
 	const {
 		name,
+		img,
 		is_closed,
 		rating,
 		description,
@@ -40,7 +41,13 @@ export default function DetailsSection({ thisRestaurant }) {
 			</section>
 
 			<section className="flex flex-col gap-4 px-10">
-				<div className="w-full bg-gray-100 h-80"></div>
+				<div className="w-full bg-gray-100 h-80">
+					<img
+						src={img}
+						alt="restaurant-image"
+						className="object-cover h-full "
+					/>
+				</div>
 				<h1 className="flex items-center justify-between mt-4 text-2xl">
 					{name} <RestaurantStatus is_closed={is_closed} />
 				</h1>

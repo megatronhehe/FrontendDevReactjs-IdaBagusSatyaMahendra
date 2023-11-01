@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
-import defaultimg from "../../assets/defaultimg.jpg";
-
 import LoadingSection from "./LoadingSection";
 import ErrorSection from "./ErrorSection";
 import DetailsSection from "./DetailsSection";

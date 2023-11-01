@@ -3,6 +3,7 @@
 		{
 			"id": "1",
 			"name": "Restaurant 1",
+			"img": "/src/assets/resimage/res1.jpg",
 			"categories": ["chinese", "indonesian"],
 			"rating": 4.5,
 			"price_level": "$$$",
@@ -14,6 +15,7 @@
 		{
 			"id": "2",
 			"name": "Restaurant 2",
+			"img": "/src/assets/resimage/res2.jpg",
 			"categories": ["brazilian"],
 			"rating": 3.7,
 			"price_level": "$$$$",
@@ -25,6 +27,7 @@
 		{
 			"id": "3",
 			"name": "Restaurant 3",
+			"img": "/src/assets/resimage/res3.jpg",
 			"categories": ["japanese", "indonesian"],
 			"rating": 3,
 			"price_level": "$$",
@@ -36,6 +39,7 @@
 		{
 			"id": "4",
 			"name": "Restaurant 4",
+			"img": "/src/assets/resimage/res4.jpg",
 			"categories": ["indian", "malaysian", "indonesian"],
 			"rating": 5,
 			"price_level": "$$$$",
@@ -47,6 +51,7 @@
 		{
 			"id": "5",
 			"name": "Restaurant 5",
+			"img": "/src/assets/resimage/res5.jpg",
 			"categories": ["italian"],
 			"rating": 2.5,
 			"price_level": "$",
@@ -58,6 +63,7 @@
 		{
 			"id": "6",
 			"name": "Restaurant 6",
+			"img": "/src/assets/resimage/res6.jpg",
 			"categories": ["japanese", "chinese"],
 			"rating": 3.5,
 			"price_level": "$$$$",
@@ -69,6 +75,7 @@
 		{
 			"id": "7",
 			"name": "Restaurant 7",
+			"img": "/src/assets/resimage/res8.jpg",
 			"categories": ["indonesian"],
 			"rating": 5,
 			"price_level": "$$$",
@@ -80,6 +87,7 @@
 		{
 			"id": "8",
 			"name": "Restaurant 8",
+			"img": "/src/assets/resimage/res1.jpg",
 			"categories": ["thai"],
 			"rating": 4,
 			"price_level": "$$",

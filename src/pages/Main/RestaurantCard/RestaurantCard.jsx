@@ -1,27 +1,22 @@
 import React from "react";
 
-import { TbCircleFilled, TbPhotoFilled } from "react-icons/tb";
-
 import Rating from "../../../components/Rating";
 
 import { Link } from "react-router-dom";
 import RestaurantStatus from "../../../components/RestaurantStatus";
 
 export default function RestaurantCard({ restaurant }) {
-	const { id, name, categories, price_level, is_closed, rating } = restaurant;
+	const { id, img, name, categories, price_level, is_closed, rating } =
+		restaurant;
 
 	return (
 		<li className="flex flex-col justify-around w-full gap-2 group h-80">
-			{/* <div className="w-full overflow-hidden h-1/2">
+			<div className="w-full overflow-hidden h-1/2">
 				<img
-					src={photo.images.original.url}
-					alt={photo.caption}
+					src={img}
+					alt={img}
 					className="object-cover w-full h-full duration-200 group-hover:scale-125"
 				/>
-			</div> */}
-
-			<div className="flex items-center justify-center w-full overflow-hidden bg-gray-200 h-1/2">
-				<TbPhotoFilled className="text-4xl text-white duration-200 group-hover:scale-125" />
 			</div>
 
 			<h2 className="font-normal">{name}</h2>

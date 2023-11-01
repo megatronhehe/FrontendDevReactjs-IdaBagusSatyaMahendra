@@ -6,6 +6,8 @@ import { TbCircle, TbCircleFilled, TbTrashX } from "react-icons/tb";
 
 import RestaurantsContext from "../../../context/RestaurantsContext";
 
+import ClearFilterButton from "./ClearFilterButton";
+
 export default function FilterModal({ setToggleFilterModal }) {
 	const {
 		isOpenNowFilter,
@@ -14,7 +16,6 @@ export default function FilterModal({ setToggleFilterModal }) {
 		priceFilter,
 		categoriesFilter,
 		setCategoriesFilter,
-		clearFilter,
 		categoriesArray,
 	} = useContext(RestaurantsContext);
 
@@ -35,9 +36,9 @@ export default function FilterModal({ setToggleFilterModal }) {
 						<TbChevronLeft /> <span className="text-sm ">back</span>
 					</button>
 					<h1 className="text-xl ">Filter </h1>
-					<button onClick={clearFilter} className="text-2xl text-gray-400 ">
-						<TbTrashX />
-					</button>
+					<div className="text-xs">
+						<ClearFilterButton />
+					</div>
 				</div>
 
 				<ul className="flex justify-between mt-6 text-sm">
