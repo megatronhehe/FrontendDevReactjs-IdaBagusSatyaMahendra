@@ -1,0 +1,84 @@
+{
+	"restaurants": [
+		{
+			"id": "1",
+			"name": "Restaurant 1",
+			"categories": ["chinese", "indonesian"],
+			"rating": 4.5,
+			"price_level": "$$$",
+			"is_closed": false,
+			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
+			"location": "Malang"
+		},
+		{
+			"id": "2",
+			"name": "Restaurant 2",
+			"categories": ["chinese", "indonesian"],
+			"rating": 3.7,
+			"price_level": "$$$",
+			"is_closed": true,
+			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
+			"location": "Surabaya"
+		},
+		{
+			"id": "3",
+			"name": "Restaurant 3",
+			"categories": ["chinese", "indonesian"],
+			"rating": 3,
+			"price_level": "$$$",
+			"is_closed": false,
+			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
+			"location": "Semarang"
+		},
+		{
+			"id": "4",
+			"name": "Restaurant 4",
+			"categories": ["chinese", "indonesian"],
+			"rating": 5,
+			"price_level": "$$$",
+			"is_closed": false,
+			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
+			"location": "Bali"
+		},
+		{
+			"id": "5",
+			"name": "Restaurant 5",
+			"categories": ["chinese", "indonesian"],
+			"rating": 2.5,
+			"price_level": "$$$",
+			"is_closed": true,
+			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
+			"location": "Malang"
+		},
+		{
+			"id": "6",
+			"name": "Restaurant 6",
+			"categories": ["chinese", "indonesian"],
+			"rating": 3.5,
+			"price_level": "$$$",
+			"is_closed": true,
+			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
+			"location": "Surabaya"
+		},
+		{
+			"id": "7",
+			"name": "Restaurant 7",
+			"categories": ["chinese", "indonesian"],
+			"rating": 5,
+			"price_level": "$$$",
+			"is_closed": false,
+			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
+			"location": "Jember"
+		},
+		{
+			"id": "8",
+			"name": "Restaurant 8",
+			"categories": ["chinese", "indonesian"],
+			"rating": 4,
+			"price_level": "$$$",
+			"is_closed": false,
+			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
+			"location": "Kediri"
+		}
+	]
+}

@@ -9,7 +9,7 @@ export default function Main() {
 		<MainContainer>
 			<section className="px-10 my-6">
 				<h1 className="text-4xl">Restaurants</h1>
-				<p className="max-w-sm text-gray-500 mt-6">
+				<p className="max-w-sm mt-6 text-gray-500">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</p>

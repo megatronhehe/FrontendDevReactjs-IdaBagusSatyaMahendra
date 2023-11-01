@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import RestaurantsContext from "../../context/RestaurantsContext";
 
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard from "./RestaurantCard/RestaurantCard";
 
 import { TbLoader } from "react-icons/tb";
 
@@ -11,7 +11,7 @@ export default function RestaurantList() {
 		useContext(RestaurantsContext);
 
 	const restaurantsElement = restaurants.map((restaurant) => (
-		<RestaurantCard key={restaurant.location_id} restaurant={restaurant} />
+		<RestaurantCard key={restaurant.id} restaurant={restaurant} />
 	));
 
 	if (isLoading.fetching) {
