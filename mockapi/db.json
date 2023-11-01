@@ -15,7 +15,7 @@
 			"name": "Restaurant 2",
 			"categories": ["chinese", "indonesian"],
 			"rating": 3.7,
-			"price_level": "$$$",
+			"price_level": "$$",
 			"is_closed": true,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
 			"location": "Surabaya"
@@ -25,7 +25,7 @@
 			"name": "Restaurant 3",
 			"categories": ["chinese", "indonesian"],
 			"rating": 3,
-			"price_level": "$$$",
+			"price_level": "$$",
 			"is_closed": false,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
 			"location": "Semarang"
@@ -35,7 +35,7 @@
 			"name": "Restaurant 4",
 			"categories": ["chinese", "indonesian"],
 			"rating": 5,
-			"price_level": "$$$",
+			"price_level": "$$$$",
 			"is_closed": false,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
 			"location": "Bali"
@@ -45,7 +45,7 @@
 			"name": "Restaurant 5",
 			"categories": ["chinese", "indonesian"],
 			"rating": 2.5,
-			"price_level": "$$$",
+			"price_level": "$",
 			"is_closed": true,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
 			"location": "Malang"
@@ -55,7 +55,7 @@
 			"name": "Restaurant 6",
 			"categories": ["chinese", "indonesian"],
 			"rating": 3.5,
-			"price_level": "$$$",
+			"price_level": "$$$$",
 			"is_closed": true,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
 			"location": "Surabaya"
@@ -75,7 +75,7 @@
 			"name": "Restaurant 8",
 			"categories": ["chinese", "indonesian"],
 			"rating": 4,
-			"price_level": "$$$",
+			"price_level": "$$",
 			"is_closed": false,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
 			"location": "Kediri"

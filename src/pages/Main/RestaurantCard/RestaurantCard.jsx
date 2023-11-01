@@ -2,10 +2,12 @@ import React from "react";
 
 import { TbCircleFilled, TbPhotoFilled } from "react-icons/tb";
 
-import Rating from "./Rating";
+import Rating from "../../../components/Rating";
+
+import { Link } from "react-router-dom";
 
 export default function RestaurantCard({ restaurant }) {
-	const { name, categories, price_level, is_closed, rating } = restaurant;
+	const { id, name, categories, price_level, is_closed, rating } = restaurant;
 
 	const restaurantStatus = (
 		<li className="flex items-center gap-1 text-gray-500">
@@ -43,9 +45,12 @@ export default function RestaurantCard({ restaurant }) {
 				{restaurantStatus}
 			</ul>
 
-			<button className="py-2 text-sm text-white duration-200 border bg-blue-950 border-blue-950 hover:bg-white hover:text-blue-950">
+			<Link
+				to={`/restaurants/${id}`}
+				className="flex justify-center py-2 text-sm text-white duration-200 border bg-blue-950 border-blue-950 hover:bg-white hover:text-blue-950"
+			>
 				LEARN MORE
-			</button>
+			</Link>
 		</li>
 	);
 }
