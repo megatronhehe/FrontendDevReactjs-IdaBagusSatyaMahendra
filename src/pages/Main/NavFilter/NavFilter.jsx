@@ -11,7 +11,7 @@ export default function NavFilter() {
 	const { isMobileMode } = useResponsive();
 
 	// toggle filter open now
-	const { setIsOpenNowFilter, isOpenNowFilter } =
+	const { setIsOpenNowFilter, isOpenNowFilter, clearFilter } =
 		useContext(RestaurantsContext);
 
 	const [priceFilter, setPriceFilter] = useState("");
@@ -27,6 +27,7 @@ export default function NavFilter() {
 			priceFilter={priceFilter}
 			setCategoriesFilter={setCategoriesFilter}
 			categoriesFilter={categoriesFilter}
+			clearFilter={clearFilter}
 		/>
 	);
 }

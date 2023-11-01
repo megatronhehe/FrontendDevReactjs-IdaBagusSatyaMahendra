@@ -14,8 +14,8 @@ export default function RestaurantsContextProvider({ children }) {
 	// error message state
 	const [error, setError] = useState("");
 
-	// OpenNow filter
-	const [isOpenNowFilter, setIsOpenNowFilter] = useState(null);
+	// OpenNow filter state
+	const [isOpenNowFilter, setIsOpenNowFilter] = useState(false);
 
 	// function to fetch restaurants
 	const fetchRestaurants = async () => {
@@ -40,12 +40,18 @@ export default function RestaurantsContextProvider({ children }) {
 		fetchRestaurants();
 	}, []);
 
+	// filtered restaurants
 	const filteredRestaurants = restaurants.filter((restaurant) => {
 		const isOpenNowMatch =
-			isOpenNowFilter === null || (isOpenNowFilter && !restaurant.is_closed);
+			!isOpenNowFilter || (isOpenNowFilter && !restaurant.is_closed);
 
 		return isOpenNowMatch;
 	});
+
+	// clear
+	const clearFilter = () => {
+		setIsOpenNowFilter(false);
+	};
 
 	return (
 		<RestaurantsContext.Provider
@@ -53,6 +59,7 @@ export default function RestaurantsContextProvider({ children }) {
 				filteredRestaurants,
 				isLoading,
 				error,
+				clearFilter,
 				fetchRestaurants,
 				setIsOpenNowFilter,
 				isOpenNowFilter,

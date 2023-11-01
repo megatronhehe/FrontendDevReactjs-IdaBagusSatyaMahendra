@@ -9,6 +9,7 @@ export default function BigNav({
 	priceFilter,
 	setCategoriesFilter,
 	categoriesFilter,
+	clearFilter,
 }) {
 	return (
 		<nav className="relative flex items-center justify-between gap-8 px-10 py-4 text-xs font-normal tracking-wide text-gray-500 border-y">
@@ -58,7 +59,10 @@ export default function BigNav({
 				</ul>
 			</div>
 
-			<button className="absolute px-6 py-1 text-gray-400 border right-8">
+			<button
+				onClick={clearFilter}
+				className="absolute px-6 py-1 text-gray-400 border right-8"
+			>
 				CLEAR ALL
 			</button>
 		</nav>
