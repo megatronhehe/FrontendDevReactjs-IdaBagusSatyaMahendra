@@ -8,7 +8,8 @@
 			"price_level": "$$$",
 			"is_closed": false,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
-			"location": "Malang"
+			"location": "Malang",
+			"address": "Jl. xxxx, No. xx"
 		},
 		{
 			"id": "2",
@@ -18,7 +19,8 @@
 			"price_level": "$$",
 			"is_closed": true,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
-			"location": "Surabaya"
+			"location": "Surabaya",
+			"address": "Jl. xxxx, No. xx"
 		},
 		{
 			"id": "3",
@@ -28,7 +30,8 @@
 			"price_level": "$$",
 			"is_closed": false,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
-			"location": "Semarang"
+			"location": "Semarang",
+			"address": "Jl. xxxx, No. xx"
 		},
 		{
 			"id": "4",
@@ -38,7 +41,8 @@
 			"price_level": "$$$$",
 			"is_closed": false,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
-			"location": "Bali"
+			"location": "Bali",
+			"address": "Jl. xxxx, No. xx"
 		},
 		{
 			"id": "5",
@@ -48,7 +52,8 @@
 			"price_level": "$",
 			"is_closed": true,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
-			"location": "Malang"
+			"location": "Malang",
+			"address": "Jl. xxxx, No. xx"
 		},
 		{
 			"id": "6",
@@ -58,7 +63,8 @@
 			"price_level": "$$$$",
 			"is_closed": true,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
-			"location": "Surabaya"
+			"location": "Surabaya",
+			"address": "Jl. xxxx, No. xx"
 		},
 		{
 			"id": "7",
@@ -68,7 +74,8 @@
 			"price_level": "$$$",
 			"is_closed": false,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
-			"location": "Jember"
+			"location": "Jember",
+			"address": "Jl. xxxx, No. xx"
 		},
 		{
 			"id": "8",
@@ -78,7 +85,8 @@
 			"price_level": "$$",
 			"is_closed": false,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
-			"location": "Kediri"
+			"location": "Kediri",
+			"address": "Jl. xxxx, No. xx"
 		}
 	]
 }

@@ -5,18 +5,10 @@ import { TbCircleFilled, TbPhotoFilled } from "react-icons/tb";
 import Rating from "../../../components/Rating";
 
 import { Link } from "react-router-dom";
+import RestaurantStatus from "../../../components/RestaurantStatus";
 
 export default function RestaurantCard({ restaurant }) {
 	const { id, name, categories, price_level, is_closed, rating } = restaurant;
-
-	const restaurantStatus = (
-		<li className="flex items-center gap-1 text-gray-500">
-			<TbCircleFilled
-				className={`${is_closed ? "text-red-400" : "text-green-400"}`}
-			/>
-			{is_closed ? "CLOSED" : "OPEN NOW"}
-		</li>
-	);
 
 	return (
 		<li className="flex flex-col justify-around w-full gap-2 group h-80">
@@ -42,7 +34,9 @@ export default function RestaurantCard({ restaurant }) {
 				<li className="text-gray-400">
 					{categories[0]} - {price_level}
 				</li>
-				{restaurantStatus}
+				<li>
+					<RestaurantStatus is_closed={is_closed} />
+				</li>
 			</ul>
 
 			<Link
