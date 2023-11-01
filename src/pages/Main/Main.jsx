@@ -1,7 +1,7 @@
 import React from "react";
 
 import MainContainer from "../../components/MainContainer";
-import NavFilter from "./NavFilter";
+import NavFilter from "./NavFilter/NavFilter";
 import RestaurantList from "./RestaurantList";
 
 export default function Main() {

@@ -1,26 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { TbCircle, TbCircleFilled } from "react-icons/tb";
 
-export default function NavFilter() {
-	// toggle filter open now
-	const [toggleOpenNow, setToggleOpenNow] = useState(false);
-	const [priceFilter, setPriceFilter] = useState("");
-	const [categoriesFilter, setCategoriesFilter] = useState("");
-
+export default function BigNav({
+	setToggleOpenNow,
+	toggleOpenNow,
+	setPriceFilter,
+	priceFilter,
+	setCategoriesFilter,
+	categoriesFilter,
+}) {
 	return (
-		<nav className="relative border-y text-xs tracking-wide font-normal py-4 px-10 text-gray-500 gap-8 flex justify-between items-center">
+		<nav className="relative flex items-center justify-between gap-8 px-10 py-4 text-xs font-normal tracking-wide text-gray-500 border-y">
 			<div className="flex ">
 				<h2>Filter By:</h2>
-				<ul className="flex ml-4 text-black gap-8">
+				<ul className="flex gap-8 ml-4 text-black">
 					<li
 						onClick={() => setToggleOpenNow((prev) => !prev)}
-						className="border-b  flex items-center gap-2"
+						className="flex items-center gap-2 border-b"
 					>
 						<div className="relative flex items-center justify-center">
 							<TbCircle className="text-xl text-gray-400" />
 							{toggleOpenNow && (
-								<TbCircleFilled className="text-xs absolute  text-blue-400" />
+								<TbCircleFilled className="absolute text-xs text-blue-400" />
 							)}
 						</div>
 						<button>Open Now</button>
@@ -56,7 +58,7 @@ export default function NavFilter() {
 				</ul>
 			</div>
 
-			<button className="border px-6 text-gray-400  py-1 absolute right-8">
+			<button className="absolute px-6 py-1 text-gray-400 border right-8">
 				CLEAR ALL
 			</button>
 		</nav>

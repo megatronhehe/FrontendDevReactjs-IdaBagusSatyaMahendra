@@ -2,7 +2,7 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-export default function ErrorPage({ error, fetchRestaurant }) {
+export default function ErrorSection({ error, fetchRestaurant }) {
 	const nav = useNavigate();
 
 	return (

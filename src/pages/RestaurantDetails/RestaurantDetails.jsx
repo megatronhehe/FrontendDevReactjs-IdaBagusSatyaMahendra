@@ -4,10 +4,9 @@ import { useParams } from "react-router-dom";
 
 import defaultimg from "../../assets/defaultimg.jpg";
 
-import LoadingPage from "./LoadingPage";
-import ErrorPage from "./ErrorPage";
-
-import DetailsPage from "./DetailsPage";
+import LoadingSection from "./LoadingSection";
+import ErrorSection from "./ErrorSection";
+import DetailsSection from "./DetailsSection";
 
 export default function RestaurantDetails() {
 	const { id } = useParams();
@@ -40,14 +39,14 @@ export default function RestaurantDetails() {
 
 	// Loading
 	if (isLoading) {
-		return <LoadingPage />;
+		return <LoadingSection />;
 	}
 
 	// error
 	if (error.length > 0) {
-		return <ErrorPage error={error} fetchRestaurant={fetchRestaurant} />;
+		return <ErrorSection error={error} fetchRestaurant={fetchRestaurant} />;
 	}
 
 	// normal
-	return <DetailsPage thisRestaurant={thisRestaurant} />;
+	return <DetailsSection thisRestaurant={thisRestaurant} />;
 }

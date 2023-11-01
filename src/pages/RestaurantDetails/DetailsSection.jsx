@@ -15,7 +15,7 @@ import {
 	TbWallet,
 } from "react-icons/tb";
 
-export default function DetailsPage({ thisRestaurant }) {
+export default function DetailsSection({ thisRestaurant }) {
 	const nav = useNavigate();
 
 	const {
@@ -74,7 +74,7 @@ export default function DetailsPage({ thisRestaurant }) {
 						<li className="flex flex-col items-center justify-between w-full p-2 text-white bg-yellow-400 rounded-lg h-28">
 							<h3 className="text-sm font-normal tracking-wide">Rating</h3>
 							<TbStarFilled className="text-3xl" />
-							<h3 className="font-bold">{rating}</h3>
+							<h3 className="font-bold">{rating}/5</h3>
 						</li>
 
 						<li className="flex flex-col items-center justify-between w-full p-2 text-white bg-blue-400 rounded-lg h-28">
