@@ -17,6 +17,9 @@ export default function RestaurantsContextProvider({ children }) {
 	// OpenNow filter state
 	const [isOpenNowFilter, setIsOpenNowFilter] = useState(false);
 
+	// Price filter state
+	const [priceFilter, setPriceFilter] = useState("");
+
 	// function to fetch restaurants
 	const fetchRestaurants = async () => {
 		setIsLoading((prev) => ({ ...prev, fetching: true }));
@@ -45,12 +48,15 @@ export default function RestaurantsContextProvider({ children }) {
 		const isOpenNowMatch =
 			!isOpenNowFilter || (isOpenNowFilter && !restaurant.is_closed);
 
-		return isOpenNowMatch;
+		const isPriceMatch = !priceFilter || priceFilter === restaurant.price_level;
+
+		return isOpenNowMatch && isPriceMatch;
 	});
 
 	// clear
 	const clearFilter = () => {
 		setIsOpenNowFilter(false);
+		setPriceFilter("");
 	};
 
 	return (
@@ -59,10 +65,13 @@ export default function RestaurantsContextProvider({ children }) {
 				filteredRestaurants,
 				isLoading,
 				error,
-				clearFilter,
 				fetchRestaurants,
+				// for filtering purposes
+				clearFilter,
 				setIsOpenNowFilter,
 				isOpenNowFilter,
+				priceFilter,
+				setPriceFilter,
 			}}
 		>
 			{children}

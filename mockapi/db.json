@@ -16,7 +16,7 @@
 			"name": "Restaurant 2",
 			"categories": ["brazilian"],
 			"rating": 3.7,
-			"price_level": "$$",
+			"price_level": "$$$$",
 			"is_closed": true,
 			"description": "lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.",
 			"location": "Surabaya",

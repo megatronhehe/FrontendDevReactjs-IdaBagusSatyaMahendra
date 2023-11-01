@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+
+import RestaurantsContext from "../../../context/RestaurantsContext";
 
 import { TbCircle, TbCircleFilled } from "react-icons/tb";
 
-export default function BigNav({
-	setIsOpenNowFilter,
-	isOpenNowFilter,
-	setPriceFilter,
-	priceFilter,
-	setCategoriesFilter,
-	categoriesFilter,
-	clearFilter,
-}) {
+export default function BigNav() {
+	const {
+		clearFilter,
+		priceFilter,
+		setPriceFilter,
+		isOpenNowFilter,
+		setIsOpenNowFilter,
+	} = useContext(RestaurantsContext);
+
+	const [categoriesFilter, setCategoriesFilter] = useState("");
+
 	return (
 		<nav className="relative flex items-center justify-between gap-8 px-10 py-4 text-xs font-normal tracking-wide text-gray-500 border-y">
 			<div className="flex ">
@@ -38,8 +42,11 @@ export default function BigNav({
 							className="w-16"
 						>
 							<option value="">Price</option>
-							<option value="1000">1000</option>
-							<option value="2000">2000</option>
+							<option value="$">$</option>
+							<option value="$$">$$</option>
+							<option value="$$$">$$$</option>
+							<option value="$$$$">$$$$</option>
+							<option value="$$$$$">$$$$$</option>
 						</select>
 					</li>
 
