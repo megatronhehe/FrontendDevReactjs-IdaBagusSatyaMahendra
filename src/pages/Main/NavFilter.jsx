@@ -28,6 +28,8 @@ export default function NavFilter() {
 
 					<li className="border-b ">
 						<select
+							id="priceFilter"
+							name="priceFilter"
 							value={priceFilter}
 							onChange={(e) => setPriceFilter(e.target.value)}
 							className="w-16"
@@ -40,6 +42,8 @@ export default function NavFilter() {
 
 					<li className="border-b ">
 						<select
+							id="categoriesFilter"
+							name="categoriesFilter"
 							value={categoriesFilter}
 							onChange={(e) => setCategoriesFilter(e.target.value)}
 							className="w-24"

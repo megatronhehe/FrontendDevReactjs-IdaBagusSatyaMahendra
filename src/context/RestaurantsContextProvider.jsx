@@ -31,10 +31,6 @@ export default function RestaurantsContextProvider({ children }) {
 		}),
 	};
 
-	useEffect(() => {
-		fetchRestaurants();
-	}, []);
-
 	// function to fetch restaurants
 	const fetchRestaurants = async () => {
 		setIsLoading((prev) => ({ ...prev, fetching: true }));
@@ -54,8 +50,14 @@ export default function RestaurantsContextProvider({ children }) {
 		}
 	};
 
+	useEffect(() => {
+		fetchRestaurants();
+	}, []);
+
 	return (
-		<RestaurantsContext.Provider value={{ restaurants, isLoading }}>
+		<RestaurantsContext.Provider
+			value={{ restaurants, isLoading, error, fetchRestaurants }}
+		>
 			{children}
 		</RestaurantsContext.Provider>
 	);

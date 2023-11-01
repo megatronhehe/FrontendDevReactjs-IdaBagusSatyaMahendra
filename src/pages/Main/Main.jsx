@@ -10,8 +10,8 @@ export default function Main() {
 			<section className="px-10 my-6">
 				<h1 className="text-4xl">Restaurants</h1>
 				<p className="max-w-sm text-gray-500 mt-6">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. deleniti
-					suscipit facilis eaque, nobis dignissimos.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</p>
 			</section>
 
