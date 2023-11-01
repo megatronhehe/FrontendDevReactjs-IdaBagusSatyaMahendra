@@ -40,9 +40,13 @@ export default function RestaurantList() {
 	return (
 		<section className="px-10 py-8">
 			<h1 className="mb-8 text-xl">All Restaurants</h1>
-			<ul className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
-				{restaurantsElement}
-			</ul>
+			{restaurantsElement.length > 0 ? (
+				<ul className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+					{restaurantsElement}
+				</ul>
+			) : (
+				<div className="w-full py-24 text-center">No restaurant found</div>
+			)}
 		</section>
 	);
 }

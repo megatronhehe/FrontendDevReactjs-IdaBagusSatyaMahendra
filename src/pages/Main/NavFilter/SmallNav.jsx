@@ -1,6 +1,7 @@
 import React from "react";
 
 import { TbAdjustmentsAlt } from "react-icons/tb";
+import ClearFilterButton from "./ClearFilterButton";
 
 export default function SmallNav({ setToggleFilterModal }) {
 	return (
@@ -13,7 +14,7 @@ export default function SmallNav({ setToggleFilterModal }) {
 				<span className="text-base">Filter</span>
 			</button>
 
-			<button className="px-5 py-1 border">CLEAR ALL</button>
+			<ClearFilterButton />
 		</nav>
 	);
 }

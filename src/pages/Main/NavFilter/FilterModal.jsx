@@ -12,7 +12,10 @@ export default function FilterModal({ setToggleFilterModal }) {
 		setIsOpenNowFilter,
 		setPriceFilter,
 		priceFilter,
+		categoriesFilter,
+		setCategoriesFilter,
 		clearFilter,
+		categoriesArray,
 	} = useContext(RestaurantsContext);
 
 	return (
@@ -69,7 +72,23 @@ export default function FilterModal({ setToggleFilterModal }) {
 							<option value="$$$$$">$$$$$</option>
 						</select>
 					</li>
-					<li>Categories</li>
+
+					<li>
+						<select
+							id="categoriesFilter"
+							name="categoriesFilter"
+							value={categoriesFilter}
+							onChange={(e) => setCategoriesFilter(e.target.value)}
+							className=""
+						>
+							<option value="">Categories</option>
+							{categoriesArray.map((category) => (
+								<option key={category} value={category}>
+									{category}
+								</option>
+							))}
+						</select>
+					</li>
 				</ul>
 			</div>
 		</section>

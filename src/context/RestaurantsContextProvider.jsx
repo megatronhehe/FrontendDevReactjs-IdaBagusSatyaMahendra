@@ -20,6 +20,19 @@ export default function RestaurantsContextProvider({ children }) {
 	// Price filter state
 	const [priceFilter, setPriceFilter] = useState("");
 
+	// Categories filter state (client side sorry)
+	const [categoriesFilter, setCategoriesFilter] = useState("");
+
+	// get all categories available
+	const categoriesArray =
+		restaurants.length > 0
+			? [
+					...new Set(
+						restaurants.map((restaurant) => restaurant.categories).flat()
+					),
+			  ]
+			: [];
+
 	// function to fetch restaurants
 	const fetchRestaurants = async () => {
 		setIsLoading((prev) => ({ ...prev, fetching: true }));
@@ -39,6 +52,7 @@ export default function RestaurantsContextProvider({ children }) {
 		}
 	};
 
+	// fetch data on render
 	useEffect(() => {
 		fetchRestaurants();
 	}, []);
@@ -50,13 +64,17 @@ export default function RestaurantsContextProvider({ children }) {
 
 		const isPriceMatch = !priceFilter || priceFilter === restaurant.price_level;
 
-		return isOpenNowMatch && isPriceMatch;
+		const isCategoryMatch =
+			!categoriesFilter || restaurant.categories.includes(categoriesFilter);
+
+		return isOpenNowMatch && isPriceMatch && isCategoryMatch;
 	});
 
-	// clear
+	// clear filter
 	const clearFilter = () => {
 		setIsOpenNowFilter(false);
 		setPriceFilter("");
+		setCategoriesFilter("");
 	};
 
 	return (
@@ -72,6 +90,9 @@ export default function RestaurantsContextProvider({ children }) {
 				isOpenNowFilter,
 				priceFilter,
 				setPriceFilter,
+				categoriesFilter,
+				setCategoriesFilter,
+				categoriesArray,
 			}}
 		>
 			{children}
