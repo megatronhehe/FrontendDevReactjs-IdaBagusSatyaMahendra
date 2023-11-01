@@ -20,17 +20,19 @@ export default function BigNav() {
 			<div className="flex ">
 				<h2>Filter By:</h2>
 				<ul className="flex gap-8 ml-4 text-black">
-					<li
-						onClick={() => setIsOpenNowFilter((prev) => !prev)}
-						className="flex items-center gap-2 border-b"
-					>
-						<div className="relative flex items-center justify-center">
-							<TbCircle className="text-xl text-gray-400" />
-							{isOpenNowFilter && (
-								<TbCircleFilled className="absolute text-xs text-blue-400" />
-							)}
-						</div>
-						<button>Open Now</button>
+					<li>
+						<button
+							onClick={() => setIsOpenNowFilter((prev) => !prev)}
+							className="flex items-center gap-2 border-b"
+						>
+							<div className="relative flex items-center justify-center">
+								<TbCircle className="text-xl text-gray-400" />
+								{isOpenNowFilter && (
+									<TbCircleFilled className="absolute text-xs text-blue-400" />
+								)}
+							</div>
+							<span>Open Now</span>
+						</button>
 					</li>
 
 					<li className="border-b ">
