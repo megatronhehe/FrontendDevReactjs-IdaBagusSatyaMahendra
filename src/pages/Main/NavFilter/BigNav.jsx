@@ -3,8 +3,8 @@ import React from "react";
 import { TbCircle, TbCircleFilled } from "react-icons/tb";
 
 export default function BigNav({
-	setToggleOpenNow,
-	toggleOpenNow,
+	setIsOpenNowFilter,
+	isOpenNowFilter,
 	setPriceFilter,
 	priceFilter,
 	setCategoriesFilter,
@@ -16,12 +16,12 @@ export default function BigNav({
 				<h2>Filter By:</h2>
 				<ul className="flex gap-8 ml-4 text-black">
 					<li
-						onClick={() => setToggleOpenNow((prev) => !prev)}
+						onClick={() => setIsOpenNowFilter((prev) => !prev)}
 						className="flex items-center gap-2 border-b"
 					>
 						<div className="relative flex items-center justify-center">
 							<TbCircle className="text-xl text-gray-400" />
-							{toggleOpenNow && (
+							{isOpenNowFilter && (
 								<TbCircleFilled className="absolute text-xs text-blue-400" />
 							)}
 						</div>

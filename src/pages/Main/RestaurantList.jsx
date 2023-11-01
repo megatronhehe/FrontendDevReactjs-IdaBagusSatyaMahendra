@@ -7,10 +7,10 @@ import RestaurantCard from "./RestaurantCard/RestaurantCard";
 import { TbLoader } from "react-icons/tb";
 
 export default function RestaurantList() {
-	const { restaurants, isLoading, error, fetchRestaurants } =
+	const { filteredRestaurants, isLoading, error, fetchRestaurants } =
 		useContext(RestaurantsContext);
 
-	const restaurantsElement = restaurants.map((restaurant) => (
+	const restaurantsElement = filteredRestaurants.map((restaurant) => (
 		<RestaurantCard key={restaurant.id} restaurant={restaurant} />
 	));
 

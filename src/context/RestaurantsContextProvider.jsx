@@ -14,6 +14,9 @@ export default function RestaurantsContextProvider({ children }) {
 	// error message state
 	const [error, setError] = useState("");
 
+	// OpenNow filter
+	const [isOpenNowFilter, setIsOpenNowFilter] = useState(null);
+
 	// function to fetch restaurants
 	const fetchRestaurants = async () => {
 		setIsLoading((prev) => ({ ...prev, fetching: true }));
@@ -37,9 +40,23 @@ export default function RestaurantsContextProvider({ children }) {
 		fetchRestaurants();
 	}, []);
 
+	const filteredRestaurants = restaurants.filter((restaurant) => {
+		const isOpenNowMatch =
+			isOpenNowFilter === null || (isOpenNowFilter && !restaurant.is_closed);
+
+		return isOpenNowMatch;
+	});
+
 	return (
 		<RestaurantsContext.Provider
-			value={{ restaurants, isLoading, error, fetchRestaurants }}
+			value={{
+				filteredRestaurants,
+				isLoading,
+				error,
+				fetchRestaurants,
+				setIsOpenNowFilter,
+				isOpenNowFilter,
+			}}
 		>
 			{children}
 		</RestaurantsContext.Provider>
