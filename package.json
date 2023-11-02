@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "concurrently \"npm run start-react\" \"npm run start-json-server\"",
-		"build": "vite build",
+		"build": "concurrently \"npm run vite build\" \"npm run start-json-server\"",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"start-react": "vite",
