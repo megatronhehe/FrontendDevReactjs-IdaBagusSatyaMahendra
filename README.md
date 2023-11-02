@@ -7,7 +7,5 @@ versi
 
 cara run
 
-1. download
-2.
-3. npm install
-4. npm run dev
+1. npm install
+2. npm run dev
